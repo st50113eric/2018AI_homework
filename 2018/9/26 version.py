@@ -6,7 +6,7 @@ from sklearn.preprocessing import PolynomialFeatures
 ############
 def compare(sample, subplotNum1, subplotNum3, subplotNum9):
     x1 = np.linspace(0, 2*np.pi, sample)
-    y1 = np.sin(x1)+np.random.randn(len(x1))/5.0
+    y1 = np.sin(x1) + np.random.randn(len(x1))/5.0
     plt.subplot(3, 3, subplotNum1)
     plt.scatter(x1, y1)
     x1 = x1.reshape(-1, 1)
