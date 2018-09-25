@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
-############
+#
 def compare(sample, subplotNum1, subplotNum3, subplotNum9):
     x1 = np.linspace(0, 2*np.pi, sample)
     y1 = np.sin(x1) + np.random.randn(len(x1))/5.0
