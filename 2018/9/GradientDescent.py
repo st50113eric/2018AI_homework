@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-# https://www.mockaroo.com/ # 排序完成
+# https://www.mockaroo.com/ # CSV排序完成
 train = np.loadtxt('./2018/9/ResearchRandomizer.csv',delimiter=',',dtype='int',skiprows=1)
 df=pd.DataFrame(train)
 print(df)
@@ -20,7 +20,7 @@ print(train_z)
 plt.scatter(train_z, train_y)
 plt.show()
 
-#參考初始化
+#參考初始化 #隨機樣本位於[0, 1)中
 theta0 = np.random.rand()
 theta1 = np.random.rand()
 
