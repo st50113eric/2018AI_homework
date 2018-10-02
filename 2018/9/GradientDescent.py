@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 # https://www.mockaroo.com/ # CSV排序完成
-train = np.loadtxt('./2018/9/ResearchRandomizer.csv',delimiter=',',dtype='int',skiprows=1)
+train = np.loadtxt('ResearchRandomizer.csv',delimiter=',',dtype='int',skiprows=1)
 df=pd.DataFrame(train)
 print(df)
 train_x = train[:,0]
