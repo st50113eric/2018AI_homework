@@ -36,13 +36,15 @@ dot_data = export_graphviz(DecisionTreePicture, out_file=None)
 graph = graphviz.Source(dot_data)
 print(graph)
 
+
 rf = RandomForestClassifier(criterion='gini', n_estimators=1000,min_samples_split=12,min_samples_leaf=1,oob_score=True,random_state=100,n_jobs=-1) 
 rf = RandomForestClassifier(n_estimators=3)
 rf.fit(X_train, y_train)
 print("RandomForest accuracy: ")
 print(rf.score(X_test, y_test))
 
+# 樹狀圖
 estimator = rf.estimators_[2]
 dot_data = export_graphviz(estimator, out_file=None) 
-graph = graphviz.Source(dot_data)
-print(graph)
+graph2 = graphviz.Source(dot_data)
+print(graph2)
