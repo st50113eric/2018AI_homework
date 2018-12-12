@@ -34,7 +34,7 @@ DecisionTreePicture = DecisionTreeClassifier(max_depth=10)
 DecisionTreePicture.fit(X_train, y_train)
 dot_data = export_graphviz(DecisionTreePicture, out_file=None) 
 graph = graphviz.Source(dot_data)
-print(graph)
+plt.show()
 
 
 rf = RandomForestClassifier(criterion='gini', n_estimators=1000,min_samples_split=12,min_samples_leaf=1,oob_score=True,random_state=100,n_jobs=-1) 
@@ -47,4 +47,4 @@ print(rf.score(X_test, y_test))
 estimator = rf.estimators_[2]
 dot_data = export_graphviz(estimator, out_file=None) 
 graph2 = graphviz.Source(dot_data)
-print(graph2)
+plt.show()
